@@ -30,11 +30,11 @@ if __name__ == "__main__":
         completed_tasks = sum(1 for task in todo_data if task.get("completed"))
 
         # Print the progress
-        print(
-            "Employee {} is done with tasks({}/{}):".format(
-                employee_name, completed_tasks, total_tasks
-            )
+        progress_message = "Employee {} is done with tasks({}/{}):".format(
+            employee_name, completed_tasks, total_tasks
         )
+        print(progress_message)
         for task in todo_data:
             if task.get("completed"):
                 print("\t {}".format(task.get("title")))
+
